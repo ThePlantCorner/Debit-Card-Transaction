@@ -29,7 +29,7 @@ button,select,input{font:inherit;color:inherit}
 .bar{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border:1px solid var(--glass-border);border-radius:14px;padding:12px 14px;box-shadow:var(--sh);margin-bottom:14px}
 .fld{display:flex;flex-direction:column;gap:3px;font-size:12px;color:var(--mute)}
 .fld input,.fld select,.q{background:var(--field);border:1px solid var(--line);border-radius:9px;padding:7px 10px;color:var(--ink);min-height:36px}
-.seg{display:flex;background:var(--field);border:1px solid var(--line);border-radius:99px;padding:3px}
+.seg{display:flex;flex-wrap:wrap;background:var(--field);border:1px solid var(--line);border-radius:99px;padding:3px}
 .seg button{border:0;background:none;padding:6px 14px;border-radius:99px;cursor:pointer;color:var(--mute);font-weight:600;transition:background .2s,color .2s}
 .seg button.on{background:var(--c1);color:var(--bg)}
 .rs{border:0;background:none;color:var(--c1);font-weight:700;cursor:pointer;padding:8px 4px;margin-left:auto}
@@ -109,7 +109,7 @@ tbody tr:hover{background:var(--field)}
 </header>
 
 <div class="bar">
-  <div class="fld">Statement<div class="seg" id="pre"></div></div>
+  <label class="fld">Statement<select id="pre"></select></label>
   <label class="fld">From<input type="date" id="df"></label>
   <label class="fld">To<input type="date" id="dt"></label>
   <label class="fld">Type<select id="sc"></select></label>
@@ -158,6 +158,99 @@ V:['Fees & VAT','VAT on fee','006MFBF','out'],
 X:['Internal transfer','Transfer to own account','033AACT','out'],
 Y:['Internal transfer','Transfer from own account','033AACT','in']};
 const RAW=[
+/* ---- January 2026 ---- */
+[1,2,'P',35.69,'260023JLL','TAPT*LokuAkka'],
+[1,3,'P',26.21,'260030rhU','New Shaklan Supermarket'],[1,3,'I',455,'260031392','Manoj Rajbanshi · Pandey bike'],
+[1,5,'P',8.5,'2600530U3','Chaat And Kulfi Wala Ca'],[1,5,'P',11,'2600549ts','Tea Spoon Restaurant'],[1,5,'I',1400,'2600532MD','Mary Balucan Loquias'],
+[1,6,'P',16.99,'260060vrC','New Shaklan Supermarket'],[1,6,'P',510,'260061Xnm','S N H Commodities General'],
+[1,7,'P',25.49,'260070f5h','New Shaklan Supermarket'],[1,7,'P',5,'2600720M2','Tea Spoon Restaurant'],
+[1,8,'P',773.35,'260081CJh','TAPT*MassinaMassina'],
+[1,10,'P',3.6,'260101KK3','New Shaklan Supermarket'],[1,10,'P',27.98,'260101d4v','Pasons 18 Supermarket LLC'],
+[1,12,'P',10,'2601201YF','SmartDXBGov-RTA'],[1,12,'P',5.5,'260121Kdy','New Shaklan Supermarket'],[1,12,'I',300,'260120YR7','Abdul Navaz · Anoch'],[1,12,'P',82.5,'260123347','Pizza Hut Al Ghurair'],
+[1,13,'P',42,'2601304Eg','Naseej Al Raqi Textiles'],[1,13,'P',31.5,'260131Eu7','V S S Parfumes Trading LL'],[1,13,'P',239.72,'260131SL0','Day To Day Union Br'],[1,13,'P',31.5,'2601321SZ','Dubai Taxi'],
+[1,14,'P',80,'260140soG','Shaklan Market 5 LLC'],[1,14,'P',68,'260141W55','Machan Restaurant'],
+[1,15,'V',0.05,'260151984'],[1,15,'O',50,'260151984','Navod Malli · Online local fund transfer'],[1,15,'F',1,'260151984'],
+[1,16,'P',4,'260161cnL','Tea Spoon Restaurant'],
+[1,17,'P',21.57,'260170MzY','New Shaklan Supermarket'],[1,17,'P',5,'2601714tk','Tea Spoon Restaurant'],
+[1,19,'P',52.25,'260193yVY','African And Eastern And'],[1,19,'P',43.08,'2601940MG','New Shaklan Supermarket'],[1,19,'I',800,'260193Z3G','Mary Balucan Loquias'],[1,19,'O',800,'260191U34','Priyan kavinda · Equated monthly installments'],
+[1,20,'F',20,'2602007Ik'],[1,20,'V',1,'2602007Ik'],
+[1,21,'P',36.99,'260211NAq','New Shaklan Supermarket'],
+[1,22,'P',20,'260220FiJ','RTA Salah Al Din'],
+[1,23,'P',20,'2602306r5','Machan Restaurant'],[1,23,'P',4.5,'260230Jg8','Tareq Grocery'],
+[1,24,'P',20,'260240QnP','RTA Salah Al Din'],[1,24,'P',3.5,'260241GtT','Tea Spoon Restaurant'],
+[1,26,'S',4777.17,'26026A36W'],[1,26,'O',500,'2602636RO','Jamshaid khan · Family support'],[1,26,'O',300,'2602636TK','Abdul Navaz · Family support'],[1,26,'O',250,'26026372D','Manoj Rajbanshi · Family support'],
+[1,27,'A',300,'2602700DF'],[1,27,'P',150,'260270dKL','SmartDXBGov-RTA'],[1,27,'A',1200,'2602702Dy'],
+[1,28,'P',355.03,'260280Kwe','TAPT*AmmiAmmi'],[1,28,'P',20,'260281Wwg','RTA Salah Al Din'],
+[1,29,'Y',2700,'26029A2AU'],[1,29,'P',12,'260291Sbg','New Avas Grocery Llc'],[1,29,'A',2700,'2602902Al'],[1,29,'P',40.24,'260291Z65','New Shaklan Supermarket'],[1,29,'P',20,'260291muU','Machan Restaurant'],
+[1,30,'F',2,'260301169'],[1,30,'V',0.1,'260301169'],[1,30,'P',9.99,'2603028QC','Gifts Village Discounts L'],
+[1,31,'A',100,'2603101OX'],[1,31,'P',60,'260311iOY','Al Ruwais Electronics Mo'],[1,31,'P',6.3,'2603121GD','Jabal Al Raha Cafeteria'],[1,31,'P',23.82,'2603121RF','New Shaklan Supermarket'],
+/* ---- February 2026 ---- */
+[2,2,'F',2,'260334135'],[2,2,'V',0.1,'260334135'],[2,2,'P',16,'2603300AL','Tareq Grocery'],[2,2,'P',20,'260330b1I','Najila Cafeteria'],[2,2,'P',26,'260330lih','Pasons 18 Supermarket LDU'],[2,2,'P',324.7,'2603313Yu','Day To Day Union Br'],[2,2,'P',295.86,'260333YXU','TAPT*ThaththiThaththi'],[2,2,'P',63.5,'260333l3N','Pizza Hut Al Ghurair'],[2,2,'P',20,'260334E6s','Machan Restaurant'],
+[2,3,'P',38.5,'260340Ak4','Dubai Taxi'],[2,3,'P',41.5,'260342Pw2','Cars Taxi Services Co LLC'],
+[2,4,'P',86.79,'260350UgT','New Shaklan Supermarket'],[2,4,'P',32.5,'260350wfx','Hadhreen Gents Salon'],[2,4,'P',15,'2603511Bh','Alsahra Pharmacy LLC'],[2,4,'P',9,'2603519F7','Alsahra Pharmacy LLC'],[2,4,'P',95.27,'260351aXm','Pasons 18 Supermarket LLC'],
+[2,5,'P',6,'260361zty','Tea Spoon Restaurant'],[2,5,'I',1400,'260361KWP','Mary Balucan Loquias'],
+[2,6,'P',237.39,'260370d4f','TAPT*N WBandara'],
+[2,7,'P',9.83,'260381D6F','New Shaklan Supermarket'],[2,7,'P',10,'260381TBR','Marsa Al Bahr Sea Food'],[2,7,'P',3.5,'260381hcC','Tea Spoon Restaurant'],[2,7,'I',30,'2603816KV','Vaisakh Kadengal'],
+[2,9,'P',10,'260400sr8','Calicut Kallayi Restauran'],[2,9,'P',5,'2604029mB','e& Digital App'],[2,9,'P',23,'2604030t1','New Shaklan Supermarket'],[2,9,'P',20,'260403ToK','Machan Restaurant'],[2,9,'P',31.53,'260403fAB','Tabby 800 82229'],[2,9,'P',4.5,'260404c1Y','Tareq Grocery'],[2,9,'P',14,'260404fUh','Tea Spoon Restaurant'],
+[2,11,'P',356.08,'260421YMv','TAPT*GDSVGammanpila'],[2,11,'P',296.74,'260421r7y','TAPT*JMNTJyasiri'],[2,11,'P',28.4,'260422CzH','New Shaklan Supermarket'],
+[2,12,'P',152.28,'260430WS6','Fast Track Vision'],[2,12,'P',15.75,'260430YRq','Gifts Village Discounts L'],[2,12,'P',10,'260431Q8o','SmartDXBGov-RTA'],[2,12,'P',300,'260431tiJ','TAPT*SCNFernando'],
+[2,13,'P',5,'2604410RZ','e& Telecom Corp'],[2,13,'P',3.5,'260441HJt','Tareq Grocery'],
+[2,14,'P',20,'260450sCJ','Machan Restaurant'],
+[2,17,'P',10.47,'260481pTv','New Shaklan Supermarket'],[2,17,'P',16,'260482FMD','Pasons 18 Supermarket LLC'],
+[2,18,'P',14.71,'260491rXt','New Shaklan Supermarket'],[2,18,'I',800,'2604911DB','Mary Balucan Loquias'],[2,18,'I',100,'2604914UY','Abdul Navaz · Fund'],[2,18,'O',1000,'260490VBI','Priyan kavinda · Family support'],
+[2,20,'F',20,'2605106hL'],[2,20,'V',1,'2605106hL'],
+[2,23,'P',6,'260541tsq','Tea Spoon Restaurant'],[2,23,'P',1.94,'260543200','Google One'],
+[2,24,'S',4360.47,'260552663'],[2,24,'P',10.49,'260551QT4','New Shaklan Supermarket'],
+[2,25,'P',30,'260560qzt','Shaklan Market 5 LLC'],[2,25,'O',100,'260560UFT','Abdul Navaz · Family support'],
+[2,26,'P',31.53,'260570a0l','Tabby 800 82229'],
+[2,27,'P',150,'260581KUm','RTA Salah Al Din'],[2,27,'P',7.24,'260581RhN','New Shaklan Supermarket'],[2,27,'P',7,'260581heJ','Tea Spoon Restaurant'],[2,27,'A',1200,'2605803lo'],
+[2,28,'F',2,'260592063'],[2,28,'V',0.1,'260592063'],[2,28,'P',178.57,'260590qmS','TAPT*NangiNangi'],[2,28,'P',297.62,'2605915JI','TAPT*ThaththiThaththi'],[2,28,'P',10,'260591k1N','S N H Commodities General'],
+/* ---- March 2026 ---- */
+[3,2,'P',24.3,'260611g6U','New Shaklan Supermarket'],[3,2,'P',5,'260612UoW','e& Digital App'],[3,2,'P',20,'2606138mf','Machan Restaurant'],
+[3,3,'P',2.99,'2606201xf','Sava International City'],[3,3,'P',105.34,'260620JUg','New Shaklan Supermarket'],[3,3,'P',10,'260620T5c','Tea Spoon Restaurant'],[3,3,'P',5,'260620wjh','e& Telecom Corp'],[3,3,'P',177.18,'260621GHg','Pasons 18 Supermarket L'],
+[3,4,'P',43.23,'2606307HP','New Shaklan Supermarket'],[3,4,'P',3.5,'260630q8M','Tareq Grocery'],[3,4,'P',358.21,'260631lLE','TAPT*AmmiAmmi'],
+[3,5,'P',15,'260640Ces','Machan Restaurant'],[3,5,'P',4.5,'260640QzE','Tea Spoon Restaurant'],[3,5,'I',300,'2606416PU','Mary Balucan Loquias'],
+[3,6,'P',120,'260650q47','TAPT*MEMFernando'],[3,6,'P',300,'260651J0W','TAPT*SCNFernando'],[3,6,'P',7,'260651r5f','Tea Spoon Restaurant'],
+[3,9,'P',18.01,'260681ac8','Aster Specialist Medical'],[3,9,'P',44.27,'260681iMP','Aster Pharmacy 137'],[3,9,'I',1400,'260680FDI','Mary Balucan Loquias'],[3,9,'P',35.82,'260682K0u','TAPT*AkkaAkka'],
+[3,10,'I',25,'260690A3Q','Lal Babu Ram · Computer services'],[3,10,'P',26.21,'260690kE3','New Shaklan Supermarket'],[3,10,'P',5,'260691SwO','e& Digital App'],[3,10,'P',1000,'260691WYs','TAPT*KMJPriyadarshana'],
+[3,11,'P',20,'260700bd0','M S M Electronics'],[3,11,'P',31.9,'260701QKc','Mohideen Supermarket LLC'],[3,11,'P',7.98,'260701sFQ','New Shaklan Supermarket'],
+[3,12,'I',1,'260710KZY','Lal Babu Ram · Family support'],
+[3,14,'I',3450,'260730901','Iroshan Bandara Karunathilaka Wijes · Inward remittance'],[3,14,'P',215.17,'2607300NE','Aster Specialist Medical'],[3,14,'A',3400,'26073011s'],[3,14,'P',20,'260731wLg','e& Digital App'],[3,14,'P',8.59,'260731yKZ','e& Digital App'],
+[3,16,'F',2,'260757538'],[3,16,'V',0.1,'260757538'],[3,16,'P',14.18,'260750rXx','TAPT*WknWkn'],[3,16,'P',6,'260751EKY','Jabal Al Raha Cafeteria'],[3,16,'P',3,'260751j1B','Tea Spoon Restaurant'],[3,16,'P',72,'2607520pi','Alsahra Pharmacy LLC'],[3,16,'I',1000,'260754649','Iroshan Bandara Karunathilaka Wijes · Inward remittance'],[3,16,'O',1000,'260750Y7Y','Iroshan Bandara · Family support'],[3,16,'P',27.67,'2607532Ii','New Shaklan Supermarket'],[3,16,'P',22.98,'2607535Ii','Gifts Village Discounts L'],
+[3,17,'P',20,'260761eZS','Machan Restaurant'],[3,17,'P',70.23,'260761s7R','New Shaklan Supermarket'],
+[3,18,'P',91.41,'2607702NU','Shaklan Market 5 LLC'],[3,18,'P',100,'260771Dwn','Aster Specialist Medical'],[3,18,'A',50,'2607701rK'],[3,18,'P',31,'260771TYm','Alsahra Pharmacy LLC'],[3,18,'P',18.47,'260771aZa','Aster Specialist Medical'],
+[3,23,'P',5,'260821Ogw','e& Telecom Corp'],[3,23,'P',5,'260822o3b','e& Digital App'],[3,23,'I',800,'260821TRD','Mary Balucan Loquias'],[3,23,'O',1200,'260821FVJ','Priyan kavinda · Family support'],[3,23,'F',20,'260821Eyr'],[3,23,'V',1,'260821Eyr'],[3,23,'P',58.39,'260829XVY','Nesto Hypermarket LLC BRA'],
+[3,25,'S',3067.13,'260844470'],[3,25,'P',10.99,'2608412wT','Day To Day General TRD'],
+[3,26,'P',30.45,'260851Owh','New Shaklan Supermarket'],[3,26,'P',17,'260851UCZ','Tasty Bites Cafeteria'],
+[3,27,'P',4,'260861VUg','Tareq Grocery'],
+[3,28,'P',31.53,'260871EvM','Tabby 800 82229'],
+[3,30,'A',100,'26089016m'],[3,30,'P',100,'260890iCB','RTA Salah Al Din'],[3,30,'P',5,'260891kQB','S N H Commodities General'],[3,30,'F',2,'26089A3AM'],[3,30,'V',0.1,'26089A3AM'],[3,30,'P',5,'2608935Hh','e& Digital App'],[3,30,'A',1200,'2608905l1'],
+[3,31,'P',350.88,'2609007UA','TAPT*AmmiAmmi'],[3,31,'P',30,'260900eKm','Machan Restaurant'],[3,31,'P',7,'260901CaA','Tea Spoon Restaurant'],
+/* ---- April 2026 ---- */
+[4,1,'P',100,'260910oCN','TAPT*SCNFernando'],[4,1,'P',60.93,'260911Dgb','Pasons 18 Supermarket L'],
+[4,2,'P',5,'260920LXx','e& Digital App'],[4,2,'P',45,'260920yIa','Kanz Keyaan Mobile Phones'],[4,2,'P',12.5,'2609211Ni','Dubai Taxi'],[4,2,'P',17,'260921xYn','Dubai Taxi'],[4,2,'P',25.81,'2609223N2','Aster Hospital Br Aster H'],[4,2,'P',25.81,'2609225cd','Aster Hospital Br Aster H'],[4,2,'X',100,'26092B33I'],
+[4,3,'P',12,'260931b7q','Cars Taxi Services Co LLC'],[4,3,'P',18.5,'260931f8G','Dubai Taxi'],
+[4,4,'P',5,'260940QHq','e& Digital App'],[4,4,'P',2,'260941oGZ','Tea Spoon Restaurant'],
+[4,6,'I',1500,'260960JSO','Mary Balucan Loquias'],
+[4,7,'P',5,'260970nb5','Tea Spoon Restaurant'],[4,7,'P',27.5,'26097135k','KFC International City'],
+[4,8,'P',2.99,'260980jB2','Sava International City'],[4,8,'P',300,'260980sCy','TAPT*SCNFernando'],[4,8,'P',813.95,'26098159m','TAPT*KMJPriyadarshana'],[4,8,'P',20.3,'260981lQ2','Pasons 18 Supermarket L'],[4,8,'I',250,'260980ZKW','Rajesh Chundaran · Govt goods/services, embassies, petty cash'],
+[4,9,'P',220,'2609902vb','DigitalDubai_DubaiPoli'],[4,9,'P',7.57,'2609919eV','New Shaklan Supermarket'],[4,9,'P',23.26,'260991Pcw','TAPT*Malva DSilva'],
+[4,10,'P',5,'261000UIj','e& Digital App'],
+[4,13,'P',16,'261032x1X','New Shaklan Supermarket'],[4,13,'P',32.5,'261033FfZ','Calicut Kallayi Restauran'],
+[4,14,'P',30.65,'261040k5W','Pasons 18 Supermarket L'],[4,14,'P',31.54,'261040qrf','Tabby 800 82229'],[4,14,'P',25.81,'261041TAc','Aster Hospital Br Aster H'],[4,14,'P',16,'261041pUf','Dubai Taxi'],[4,14,'P',12,'261041uwW','Dubai Taxi'],
+[4,15,'P',17.34,'261051RPw','New Shaklan Supermarket'],[4,15,'P',43.85,'261051Yub','Pasons 18 Supermarket L'],
+[4,16,'P',157.89,'261060cpn','TapTap Send'],[4,16,'I',3000,'2610618X9','Krishnan Govind Anand · Family support'],
+[4,17,'P',50,'261070sb3','RTA Salah Al Din'],
+[4,18,'P',7.74,'261080cyb','New Shaklan Supermarket'],[4,18,'P',100,'261081Khr','SmartDXBGov-RTA'],
+[4,20,'P',20,'2611018j9','e& Telecom Corp'],[4,20,'P',49.99,'261101A0r','e& Digital App'],[4,20,'P',34.98,'261101p5G','New Shaklan Supermarket'],[4,20,'P',2,'261101s8h','Tea Spoon Restaurant'],[4,20,'P',50.27,'261102VqB','New Shaklan Supermarket'],
+[4,21,'F',20,'2611107dL'],[4,21,'V',1,'2611107dL'],[4,21,'P',30,'261110Zjy','Look Taste Restaurant'],[4,21,'P',134.22,'261110jiJ','Tabby 800 82229'],[4,21,'O',1000,'261110RMA','Priyan kavinda · Family support'],
+[4,22,'P',33,'2611213oC','Look Taste Restaurant'],
+[4,23,'P',701.75,'261130xtY','TAPT*KANKKuruwitaKANKKuru'],[4,23,'P',500,'261131GjS','Aster Hospital Br Aster H'],
+[4,24,'P',71.83,'261141Syk','Pasons 18 Supermarket L'],[4,24,'P',10,'261141so1','Machan Restaurant'],
+[4,27,'P',11.63,'261171K1j','TapTap Send'],[4,27,'P',19,'261172F3H','Tea Spoon Restaurant'],[4,27,'P',52.5,'2611737nj','Hala Phar 13-1087'],[4,27,'S',3634.78,'261178565'],[4,27,'P',20.65,'261173L96','Aster Hospital Br Aster H'],[4,27,'P',6,'261173Wvx','Alsahra Pharmacy LLC'],[4,27,'P',20,'2611748gO','Tea Spoon Restaurant'],
+[4,28,'P',26.92,'261180lm1','New Shaklan Supermarket'],[4,28,'P',116.08,'261180mtw','Pasons 18 Supermarket L'],[4,28,'P',25,'261180whD','Tea Spoon Restaurant'],
+[4,29,'P',37.21,'261190vtq','New Shaklan Supermarket'],[4,29,'A',3200,'26119030d'],
+[4,30,'P',20,'261201Zst','Tea Spoon Restaurant'],[4,30,'P',30,'261201fNx','Machan Restaurant'],
 /* ---- May 2026 ---- */
 [5,1,'I',3900,'261210VM2'],
 [5,1,'P',346.82,'2612117iT','TapTap Send'],
@@ -287,8 +380,8 @@ const RAW=[
 [8,29,'P',37,'262410lkY'],[8,29,'P',24.95,'262411bF3'],[8,29,'P',6,'2624128gV'],[8,29,'O',1200,'262410SJ1','Sumithralatha P Pemadasage · Family support'],[8,29,'P',19,'262412mxO'],[8,29,'P',21.8,'262413Ajp'],[8,29,'P',4,'262413xCH'],[8,29,'I',1200,'262413A54','Sumithralatha P Pemadasage · Family support'],
 [8,31,'P',100,'262430E2A'],[8,31,'P',335.95,'262430KDQ'],[8,31,'P',44,'2624328Tc'],[8,31,'P',39,'262433qW9'],[8,31,'P',39.91,'262434Iiy'],[8,31,'P',5.5,'262434fkV']];
 const TX=RAW.map(([mo,d,k,a,r,n])=>{const c=CODE[k];return{id:c[2]+r,d:`2026-${p2(mo)}-${p2(d)}`,m:c[1]+(n?' · '+n:''),c:c[0],dir:c[3],a}});
-const DS='2026-05-01',END='2026-08-31';
-const MONTHS=[['2026-05-01','2026-05-31','May 2026'],['2026-06-01','2026-06-30','June 2026'],['2026-07-01','2026-07-31','July 2026'],['2026-08-01','2026-08-31','August 2026']];
+const DS='2026-01-01',END='2026-08-31';
+const MONTHS=[['2026-01-01','2026-01-31','January 2026'],['2026-02-01','2026-02-28','February 2026'],['2026-03-01','2026-03-31','March 2026'],['2026-04-01','2026-04-30','April 2026'],['2026-05-01','2026-05-31','May 2026'],['2026-06-01','2026-06-30','June 2026'],['2026-07-01','2026-07-31','July 2026'],['2026-08-01','2026-08-31','August 2026']];
 
 /* ---------- state ---------- */
 const DEF={from:'2026-08-01',to:'2026-08-31',cat:'All'};
@@ -376,12 +469,12 @@ function renderTable(){let r=win(F.from,F.to);const q=F.q.toLowerCase();
 
 /* ---------- controls ---------- */
 function sync(){$('#df').value=F.from;$('#dt').value=F.to;$('#sc').value=F.cat;
-  document.querySelectorAll('#pre button').forEach(b=>{const m=MONTHS[b.dataset.m];b.classList.toggle('on',m&&F.from==m[0]&&F.to==m[1])})}
+  const cur=MONTHS.findIndex(m=>F.from==m[0]&&F.to==m[1]);$('#pre').value=cur>=0?cur:'all';}
 function update(){sync();const cur=renderKPIs();renderCharts(cur);renderTable()}
-$('#pre').innerHTML=MONTHS.map((m,i)=>`<button data-m="${i}">${m[2].split(' ')[0]}</button>`).join('')+'<button data-m="all">All</button>';
+$('#pre').innerHTML=MONTHS.map((m,i)=>`<option value="${i}">${m[2]}</option>`).join('')+'<option value="all">All (Jan\u2013Aug)</option>';
 $('#sc').innerHTML=['All',...TYPES].map(c=>`<option value="${c}">${c=='All'?'All types':c}</option>`).join('');
 $('#df').min=$('#dt').min=DS;$('#df').max=$('#dt').max=END;
-document.querySelectorAll('#pre button').forEach(b=>b.onclick=()=>{const mi=b.dataset.m;if(mi=='all'){F.from=DS;F.to=END}else{F.from=MONTHS[mi][0];F.to=MONTHS[mi][1]}F.page=0;update()});
+$('#pre').onchange=e=>{const mi=e.target.value;if(mi=='all'){F.from=DS;F.to=END}else{F.from=MONTHS[mi][0];F.to=MONTHS[mi][1]}F.page=0;update()};
 $('#df').onchange=e=>{if(!e.target.value)return;F.from=e.target.value;if(F.from>F.to)F.to=F.from;F.page=0;update()};
 $('#dt').onchange=e=>{if(!e.target.value)return;F.to=e.target.value;if(F.to<F.from)F.from=F.to;F.page=0;update()};
 $('#sc').onchange=e=>{F.cat=e.target.value;F.page=0;update()};
